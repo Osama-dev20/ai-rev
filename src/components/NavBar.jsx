@@ -9,6 +9,7 @@ const links = [
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
       <div className="app-container flex justify-between items-center h-16">
@@ -40,12 +41,12 @@ function NavBar() {
       <div className="md:hidden bg-white shadow-lg rounded-b-lg px-2 pt-2 space-y-1 pb-3">
         { 
           links.map((link) => (
-            <a key={link.name} className="mobile-nav-item " href={link.href}>{link.name}</a>
+            <a key={link.name} className="mobile-nav-item" href={link.href}>{link.name}</a>
           ))}
           <a className="mobile-nav-btn" href="">Get Started</a> 
       </div>
      )}
-
+     
     </nav>
   )
 }
